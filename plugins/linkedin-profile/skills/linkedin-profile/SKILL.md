@@ -1,6 +1,6 @@
 ---
 name: linkedin-profile
-description: Read the user's full LinkedIn profile, edit profile sections (About, experience, education, skills, certifications, projects, languages) and write posts, by driving a logged-in browser. Use when the user asks to view, export, update or improve their own LinkedIn profile or to draft and publish a LinkedIn post.
+description: Read the user's full LinkedIn profile, edit profile sections (About, experience, education, skills, certifications, projects, languages) and create, read, edit and delete posts, by driving a logged-in browser. Use when the user asks to view, export, update or improve their own LinkedIn profile or to draft, publish, list, edit or delete LinkedIn posts.
 ---
 
 # LinkedIn profile via browser
@@ -22,12 +22,15 @@ follow `references/safety.md`.
 3. **Edit a section.** Open the section's edit form, read the current values, then show the user a
    before/after diff and **wait for explicit approval**. Save, then re-read the section and confirm
    the saved values match.
-4. **Post.** Draft the text, show it, **wait for explicit approval**, publish, then return the post URL.
+4. **Posts (create, read, update, delete).** Follow `references/posts.md`. Reading needs no approval.
+   For create and update, show the final text (a before/after diff for updates) and **wait for explicit
+   approval**. For delete, show the post's date, URL and text and **wait for explicit confirmation of
+   that specific post**; deletion is irreversible. Afterwards re-check the result and return the post URL.
 5. **Report.** Say exactly what changed, or that nothing did.
 
 ## Rules
 
-- One write action at a time. No bulk edits, no loops over many sections without approval each time.
+- One write action at a time. No bulk edits or bulk deletes, no loops over many sections without approval each time.
 - Do not touch messaging, connections, invitations, settings, or other people's content.
 - If the page differs from what the reference files describe, trust what you see and tell the user.
 - Stop and report on CAPTCHA, checkpoint, "unusual activity" notices or unexpected dialogs.

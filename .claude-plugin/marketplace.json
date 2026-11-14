@@ -6,7 +6,7 @@
     {
       "name": "linkedin-profile",
       "source": "./plugins/linkedin-profile",
-      "description": "Read and edit your own LinkedIn profile and create posts through a browser (Playwright MCP) with approval gates."
+      "description": "Read and edit your own LinkedIn profile and create, edit and delete posts through a browser (Playwright MCP) with approval gates."
     }
   ]
 }

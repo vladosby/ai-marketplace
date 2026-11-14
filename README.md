@@ -6,7 +6,7 @@ Personal marketplace of agent plugins.
 
 ### linkedin-profile
 Skill + [Playwright MCP](https://github.com/microsoft/playwright-mcp) to read your full LinkedIn profile,
-edit its sections and write posts through a browser. Every save/publish needs your approval.
+edit its sections and create, read, edit and delete posts through a browser. Every save/publish needs your approval.
 
 > **Risk notice.** Automating LinkedIn is against its terms of service and can get an account restricted.
 > Use it only on your own account, at low volume, and only when you ask for it.
