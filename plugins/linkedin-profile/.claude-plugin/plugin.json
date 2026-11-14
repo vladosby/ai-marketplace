@@ -1,7 +1,7 @@
 {
   "name": "linkedin-profile",
-  "version": "0.1.0",
-  "description": "Skill + Playwright MCP for reading and editing your own LinkedIn profile and writing posts, with approval before every write.",
+  "version": "0.2.0",
+  "description": "Skill + Playwright MCP for reading and editing your own LinkedIn profile and managing posts (create, read, edit, delete), with approval before every write.",
   "author": { "name": "vladosby" },
   "license": "MIT",
   "keywords": ["linkedin", "profile", "playwright", "browser", "skill"]
