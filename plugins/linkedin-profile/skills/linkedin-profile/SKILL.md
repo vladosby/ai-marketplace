@@ -14,6 +14,9 @@ follow `references/safety.md`.
 
 ## Workflow
 
+0. **Check tools.** Confirm a browser tool is available. If not, stop and tell the user: install Node.js
+   (the Playwright MCP starts with `npx`), fully restart the app, and check the Playwright MCP is listed.
+   Do not try other routes (HTTP calls, scraping, asking for cookies or tokens).
 1. **Session check.** Open `https://www.linkedin.com/in/me/`. If a login or checkpoint page appears,
    stop and ask the user to sign in in the browser window, then continue. Never ask for or type
    credentials, 2FA codes or cookies.

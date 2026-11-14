@@ -31,6 +31,12 @@ The skill is plain Agent Skills format, so any tool that reads `SKILL.md` can us
 ```
 Any browser tool that can open pages, read them, click and type works in place of Playwright MCP.
 
+## Troubleshooting
+- **Playwright MCP is not listed:** Node.js (`npx`) is probably not installed, or the app was not fully
+  restarted after installing it. Install Node.js, quit the app completely and reopen it.
+- Plugin-bundled MCP servers may not load in every Claude Desktop mode. As a fallback, add the same
+  `playwright` entry to `claude_desktop_config.json`.
+
 ## Contributing
 See `AGENTS.md`. Work on a feature branch and open a PR into `main`.
 
