@@ -1,0 +1,12 @@
+{
+  "name": "vladosby-ai",
+  "owner": { "name": "vladosby" },
+  "metadata": { "description": "Personal marketplace of agent plugins, skills and MCP configs." },
+  "plugins": [
+    {
+      "name": "linkedin-profile",
+      "source": "./plugins/linkedin-profile",
+      "description": "Read and edit your own LinkedIn profile and create posts through a browser (Playwright MCP) with approval gates."
+    }
+  ]
+}

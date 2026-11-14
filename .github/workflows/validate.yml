@@ -1,0 +1,29 @@
+name: validate
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON and skill frontmatter
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, re, sys
+          root = pathlib.Path(".")
+          for p in root.rglob("*.json"):
+              if ".git" in p.parts: continue
+              json.loads(p.read_text())
+          mk = json.loads((root/".claude-plugin/marketplace.json").read_text())
+          for pl in mk["plugins"]:
+              d = root/pl["source"]
+              assert (d/".claude-plugin/plugin.json").exists(), f"missing plugin.json for {pl['name']}"
+          for s in root.rglob("SKILL.md"):
+              t = s.read_text()
+              m = re.match(r"---\nname: (.+)\ndescription: (.+)\n---\n", t)
+              assert m, f"bad frontmatter: {s}"
+              assert m.group(1) == s.parent.name, f"name != dir: {s}"
+          print("ok")
+          PY
